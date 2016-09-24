@@ -1,0 +1,240 @@
+@import "variable";
+/*----------section acceuil-------------*/
+/*----------section produit biere-------------*/
+
+/*------------accueil-----------*/
+/*------------section produit-----------*/
+.produit{
+    width: 100%;
+    background-color: $colorPricipal;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.biere img{
+    position: relative;
+    margin: auto;
+    display: block;
+}
+
+.ombre-sol{
+    margin-top: 30%;
+    position: absolute;
+    width: 100%;
+    height: 152px;
+    background-image: url('../../images/patternFond.png');
+    background-repeat: repeat;
+    opacity: 0.3;
+
+}
+
+.grad-clair{
+    margin-top: -150px;
+    margin-left: 510px;
+    position: absolute;
+    background-image: url('../../images/biereColor1.png');
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 145px;
+}
+
+.grad-moyen{
+    margin-top: -241px;
+    margin-left: 510px;
+    position: absolute;
+    background-image: url('../../images/biereColor2.png');
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 145px;
+}
+
+.grad-fonce{
+    margin-top: -380px;
+    margin-left: 510px;
+    position: absolute;
+    background-image: url('../../images/biereColor3.png');
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 145px;
+}
+
+.description-left{
+    margin-top: -500px;
+    margin-left: 130px;
+    width: 400px;
+    height: 500px;
+
+    position: absolute;
+}
+
+.trait-clair{
+    padding-top: 10px;
+    margin-top: 100px;
+    margin-left: 100px;
+    background-image: url('../../images/biereTrait1.png');
+    background-repeat: no-repeat;
+    width: 301px;
+    height: 200px;
+    p{
+        color:#fff;
+        margin-left: -50px;
+        margin-top: -40px;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}
+
+.trait-fonce{
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-left: 200px;
+    background-image: url('../../images/biereTrait3.png');
+    background-repeat: no-repeat;
+    width: 277px;
+    height: 247px;
+    p{
+        color:#fff;
+        margin-top:-70px;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}
+
+.description-right{
+    margin-top: -500px;
+    margin-left:450px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+}
+
+.trait-moyen{
+    padding-top: 10px;
+    margin-top: 200px;
+    margin-left: 130px;
+    background-image: url('../../images/biereTrait2.png');
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 247px;
+    p{
+        color:#fff;
+        margin-top:-70px;
+        font-size: 19px;
+        font-weight: 700;
+        padding-left:330px;
+        padding-top: 10px;
+
+    }
+}
+.btn{
+    float: right;
+}
+.btn-biere{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    right: 20%;
+    margin-top: -25px;
+}
+.btn-biere:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ffffff;
+    color: #000;
+}
+
+.btn-biere:active{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ffffff;
+    color: #000;
+}
+
+.btn:active,
+.btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/*------------fin section produit-----------*/
+/*------------section contact-----------*/
+.contact{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px;
+    & .info{
+        width: 210px;
+        text-align: center;
+    }
+    & .brass{
+        margin-left: 95px;
+    }
+    & .horra{
+        margin-right: 80px;
+    }
+    #sep{
+        border-right: 2px solid black;
+    }
+}
+/*---------- brasserie -------------*/
+.display{
+    display: flex;
+    justify-content: space-around;
+}
+.img{
+    .lar{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+.text{
+    div{
+        width: 90%;
+        margin:auto;   
+    }
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: $colorPricipal;
+
+}
+.parag{
+    div{
+        width: 22%;
+    }
+    .med{
+        width: 58%;
+        height: 100%
+    }
+    margin: 20px 0;
+}
+
+.half{
+    width: 40%;
+    .lar{
+        width: 100%;
+
+    }
+}
+.presentation{
+    .med{
+        width: 50%;
+        margin-right: 100px;
+    }
+    .smal{
+        width: 20%;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    background-color: $colorPricipal;
+}
+p{
+    text-align: justify;
+}
+
+/*----------fin brasserie-------------*/
