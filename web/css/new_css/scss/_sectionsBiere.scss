@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 16:23:40
+    Author     : hugues
+*/
+@import "_variable.scss";
+
+.title-biere{
+    background-color: $colorPricipal;
+    width: 100%;
+    h1{
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.description{
+    padding-top: 30px;
+    text-align: justify;
+}
+
+.name-biere{
+    text-align: center;
+    
+}
+.produits{
+margin: auto;
+}
+
+.thumb-work{
+width: 300px;
+height: 390px;
+margin-top: 50px;
+margin-left: 30px;
+}
+
+.thumb-img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.thumb-effect{
+  background: rgba(27, 163, 156, 1);
+  height: 0px;
+  position: relative;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+
+.thumb-work:hover .thumb-effect{
+background: $colorPricipal;
+margin-top: -220px;
+height: 220px;
+opacity: 1;
+transition: 0.4s;
+}
+
+.thumb-work:hover .thumb-effect-2{
+background: $colorPricipal;
+height: 170px;
+margin-top: -170px;
+opacity:1;
+transition: 0.6s;
+
+}
+
+.thumb-title{
+  opacity: 1;
+  color: black;
+  z-index: 2000;
+  text-align: center;
+}
