@@ -42,7 +42,7 @@
 .navbar-main .navbar-nav > .active > a:hover,
 .navbar-main .navbar-nav > .active > a:focus {
   color: #000;
-  border-bottom: 2px solid #95C91C;
+  border-bottom: 2px solid #F6D983;
   background-color: transparent; }
 
 .navbar-main .navbar-toggle .icon-bar {
@@ -52,6 +52,9 @@
   height: 86px;
   padding-top: 10px;
   transition: 0.4s; }
+  .navbar-brand img {
+    padding-left: 40px;
+    padding-right: 20px; }
 
 .navbar-brand-min img {
   height: 66px;
@@ -92,7 +95,7 @@ body {
   background-color: #f9f9f9; }
 
 .header {
-  padding-top: 200px;
+  padding-top: 15%;
   padding-bottom: 40px; }
 
 h1, h2, h3 {
@@ -150,7 +153,7 @@ span {
 /*------------section produit-----------*/
 .produit {
   width: 100%;
-  background-color: #95C91C;
+  background-color: #F6D983;
   padding-top: 90px;
   padding-bottom: 40px; }
 
@@ -372,5 +375,70 @@ textarea {
 
 #map {
   height: 500px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 16:23:40
+    Author     : hugues
+*/
+.title-biere {
+  background-color: #F6D983;
+  width: 100%; }
+  .title-biere h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+
+.description {
+  padding-top: 30px;
+  text-align: justify; }
+
+.name-biere {
+  text-align: center; }
+
+.produits {
+  margin: auto; }
+
+.thumb-work {
+  width: 300px;
+  height: 390px;
+  margin-top: 50px;
+  margin-left: 30px; }
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.thumb-effect {
+  background: #1ba39c;
+  height: 0px;
+  position: relative;
+  opacity: 0;
+  transition: 0.3s; }
+
+.thumb-work:hover .thumb-effect {
+  background: #F6D983;
+  margin-top: -220px;
+  height: 220px;
+  opacity: 1;
+  transition: 0.4s; }
+
+.thumb-work:hover .thumb-effect-2 {
+  background: #F6D983;
+  height: 170px;
+  margin-top: -170px;
+  opacity: 1;
+  transition: 0.6s; }
+
+.thumb-title {
+  opacity: 1;
+  color: black;
+  z-index: 2000;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
