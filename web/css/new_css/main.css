@@ -95,8 +95,11 @@ body {
   padding-top: 200px;
   padding-bottom: 40px; }
 
-h1 {
+h1, h2, h3 {
   text-transform: uppercase; }
+
+p {
+  text-align: justify; }
 
 footer {
   background-color: #111111;
@@ -297,50 +300,77 @@ span {
   .contact #sep {
     border-right: 2px solid black; }
 
-/*---------- brasserie -------------*/
-.display {
-  display: flex;
-  justify-content: space-around; }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 13:24:18
+    Author     : sebastien
+*/
+.brasserie {
+  margin-top: 20px; }
 
-.img .lar {
-  width: 90%;
-  margin-left: 5%; }
+.presentation h3 {
+  margin: 0 0 5px 0;
+  padding: 0; }
 
-.text {
-  padding: 20px 0;
-  margin-top: 20px;
-  background-color: #95C91C; }
-  .text div {
-    width: 90%;
-    margin: auto; }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 15:45:19
+    Author     : sebastien
+*/
+.formulaire {
+  padding: 25px;
+  background-image: url("../../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-.parag {
-  margin: 20px 0; }
-  .parag div {
-    width: 22%; }
-  .parag .med {
-    width: 58%;
-    height: 100%; }
+input {
+  margin: 15px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 2px; }
 
-.half {
-  width: 40%; }
-  .half .lar {
-    width: 100%; }
+textarea {
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 900;
+  border: 1px solid white;
+  border-radius: 2px; }
 
-.presentation {
-  background-color: #95C91C; }
-  .presentation .med {
-    width: 50%;
-    margin-right: 100px; }
-  .presentation .smal {
-    width: 20%;
-    height: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px; }
+::-webkit-input-placeholder {
+  color: white; }
 
-p {
-  text-align: justify; }
+::-moz-placeholder {
+  color: white; }
 
-/*----------fin brasserie-------------*/
+.trouver h1 {
+  margin-top: 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: white; }
+
+.sep {
+  padding-bottom: 10px;
+  border-bottom: 2px solid gray; }
+
+.cont {
+  margin-top: 40px; }
+
+.cont p {
+  margin-top: 20px; }
+
+#map {
+  height: 500px; }
 
 /*# sourceMappingURL=main.css.map */
