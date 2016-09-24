@@ -42,7 +42,7 @@
 .navbar-main .navbar-nav > .active > a:hover,
 .navbar-main .navbar-nav > .active > a:focus {
   color: #000;
-  border-bottom: 2px solid #95C91C;
+  border-bottom: 2px solid #F6D983;
   background-color: transparent; }
 
 .navbar-main .navbar-toggle .icon-bar {
@@ -52,6 +52,9 @@
   height: 86px;
   padding-top: 10px;
   transition: 0.4s; }
+  .navbar-brand img {
+    padding-left: 40px;
+    padding-right: 20px; }
 
 .navbar-brand-min img {
   height: 66px;
@@ -92,7 +95,7 @@ body {
   background-color: #f9f9f9; }
 
 .header {
-  padding-top: 200px;
+  padding-top: 15%;
   padding-bottom: 40px; }
 
 h1 {
@@ -147,7 +150,7 @@ span {
 /*------------section produit-----------*/
 .produit {
   width: 100%;
-  background-color: #95C91C;
+  background-color: #F6D983;
   padding-top: 90px;
   padding-bottom: 40px; }
 
@@ -283,64 +286,98 @@ span {
 
 /*------------fin section produit-----------*/
 /*------------section contact-----------*/
-.contact {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 0px; }
-  .contact .info {
-    width: 210px;
-    text-align: center; }
-  .contact .brass {
-    margin-left: 95px; }
-  .contact .horra {
-    margin-right: 80px; }
-  .contact #sep {
-    border-right: 2px solid black; }
+.info {
+  padding-bottom: 50px;
+  padding-top: 30px; }
 
-/*---------- brasserie -------------*/
-.display {
-  display: flex;
-  justify-content: space-around; }
+.caption h3 {
+  text-align: center;
+  text-transform: uppercase; }
+.caption p {
+  text-align: center; }
 
-.img .lar {
-  width: 90%;
-  margin-left: 5%; }
+.icon {
+  margin-bottom: 10px;
+  /*-----reglage position txt-------*/
+  padding-top: 8px;
+  /*-----reglage hauteur icon-------*/
+  font-size: 35px;
+  /*-----reglage size icon-------*/
+  color: #696969;
+  /*-----color icon-------*/
+  width: 70px;
+  /*-----------taille background icon--------*/
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #888;
+  text-align: center;
+  transition: 0.3s;
+  margin-left: auto;
+  margin-right: auto; }
 
-.text {
-  padding: 20px 0;
-  margin-top: 20px;
-  background-color: #95C91C; }
-  .text div {
-    width: 90%;
-    margin: auto; }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 16:23:40
+    Author     : hugues
+*/
+.title-biere {
+  background-color: #F6D983;
+  width: 100%; }
+  .title-biere h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px; }
 
-.parag {
-  margin: 20px 0; }
-  .parag div {
-    width: 22%; }
-  .parag .med {
-    width: 58%;
-    height: 100%; }
-
-.half {
-  width: 40%; }
-  .half .lar {
-    width: 100%; }
-
-.presentation {
-  background-color: #95C91C; }
-  .presentation .med {
-    width: 50%;
-    margin-right: 100px; }
-  .presentation .smal {
-    width: 20%;
-    height: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-
-p {
+.description {
+  padding-top: 30px;
   text-align: justify; }
 
-/*----------fin brasserie-------------*/
+.name-biere {
+  text-align: center; }
+
+.produits {
+  margin: auto; }
+
+.thumb-work {
+  width: 300px;
+  height: 390px;
+  margin-top: 50px;
+  margin-left: 30px; }
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.thumb-effect {
+  background: #1ba39c;
+  height: 0px;
+  position: relative;
+  opacity: 0;
+  transition: 0.3s; }
+
+.thumb-work:hover .thumb-effect {
+  background: #F6D983;
+  margin-top: -220px;
+  height: 220px;
+  opacity: 1;
+  transition: 0.4s; }
+
+.thumb-work:hover .thumb-effect-2 {
+  background: #F6D983;
+  height: 170px;
+  margin-top: -170px;
+  opacity: 1;
+  transition: 0.6s; }
+
+.thumb-title {
+  opacity: 1;
+  color: black;
+  z-index: 2000;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
