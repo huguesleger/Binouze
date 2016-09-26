@@ -1,8 +1,8 @@
 {% extends ":site:index.html.twig" %}
 
 {% block section %}
-    <div class="header">
-        <div id="formulaire" class="formulaire container">
+    <div class="header header-contact">
+        <div id="formulaire" class="formulaire">
             <div id="form_contact" class="col-xs-12">
                 <form action="" id="contact" method="POST">
                     <p>
@@ -22,10 +22,10 @@
                 <span id="msg_all"></span> 
             </div>
         </div>
-        <div class="container trouver">
-            <h1>
-                ou nous trouver
-            </h1>
+        <h1 class="trouver">
+            ou nous trouver
+        </h1>        
+        <div class="container">
             <div class="col-lg-6 col-sm-12">
                 <h2>BRASSERIE RASPAILLAC</h2>
                 <p>51 rue Raspaillac</p>
@@ -56,7 +56,6 @@
                 return map;
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
     </div>
 {%endblock%}

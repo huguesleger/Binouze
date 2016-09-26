@@ -327,12 +327,30 @@ and open the template in the editor.
     Created on : 24 sept. 2016, 13:24:18
     Author     : sebastien
 */
-.brasserie {
-  margin-top: 20px; }
+.header-brass {
+  padding-bottom: 0; }
+
+.img-responsive {
+  margin: auto; }
+
+.brasserie, .presentation {
+  background-color: #F6D983;
+  margin: auto; }
+  .brasserie h1, .presentation h1 {
+    text-align: center; }
 
 .presentation h3 {
   margin: 0 0 5px 0;
   padding: 0; }
+
+.margin {
+  margin: 50px auto; }
+
+.margin-min {
+  margin: 25px 0; }
+
+.libre {
+  padding: 0 15px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -343,8 +361,12 @@ and open the template in the editor.
     Created on : 24 sept. 2016, 15:45:19
     Author     : sebastien
 */
+.header-contact {
+  padding-bottom: 0; }
+
 .formulaire {
   padding: 25px;
+  height: 350px;
   background-image: url("../../images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -354,7 +376,6 @@ input {
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   font-weight: 900;
-  text-transform: uppercase;
   border: 1px solid white;
   border-radius: 2px; }
 
@@ -372,7 +393,7 @@ textarea {
 ::-moz-placeholder {
   color: white; }
 
-.trouver h1 {
+.trouver {
   margin-top: 0;
   padding: 10px 0;
   text-align: center;

@@ -1,3 +1,4 @@
+@import "variable";
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -7,10 +8,29 @@ and open the template in the editor.
     Created on : 24 sept. 2016, 13:24:18
     Author     : sebastien
 */
-.brasserie{
-    margin-top: 20px;
+.header-brass{
+    padding-bottom: 0;
+}
+.img-responsive{
+    margin: auto;
+}
+.brasserie, .presentation{
+    background-color: $colorPricipal;
+    margin: auto;
+    h1{
+        text-align: center
+    }
 }
 .presentation h3{
     margin: 0 0 5px 0;
     padding: 0;
+}
+.margin{
+    margin: 50px auto;
+}
+.margin-min{
+    margin: 25px 0;
+}
+.libre{
+    padding: 0 15px;
 }

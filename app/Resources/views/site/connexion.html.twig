@@ -1,0 +1,16 @@
+{% extends ":site:index.html.twig" %}
+
+{% block section %}
+    <div class="header">
+        <form action="" id="connexion" method="POST">
+           
+                <input id="nom" name="identifiant" placeholder="Identifiant" type="text" class="col-xs-3 col-xs-offset-2">
+                <input id="email" name="mdp" placeholder="Mot de passe " type="text" class="col-xs-3 col-xs-offset-2">
+                <span id="msg_email"></span>
+                <span id="msg_nom"></span>
+            <p>
+                <input class="btn-envoyer col-xs-2 col-xs-offset-8" type="submit" value="Envoyer" />
+            </p>
+        </form>
+    </div>
+{% endblock%}

@@ -64,4 +64,12 @@ class ViewController extends Controller{
     {
      
     }
+    /**
+     * @Route("/connexion", name="connec")
+     * @Template(":site:connexion.html.twig")
+     */
+    public function connexion()
+    {
+     
+    }
 }
