@@ -7,9 +7,15 @@ and open the template in the editor.
     Created on : 27 sept. 2016, 14:21:12
     Author     : sebastien
 */
+@import "_variable.scss";
+.header-conect{
+    padding-bottom: 0;
+    margin: 0;
+}
 .header-conect .container{
     background-image: url('../../images/web.png');
     background-size: cover;
+    padding: 0;
 }
 
 .logo{
@@ -36,6 +42,7 @@ and open the template in the editor.
     width: 400px;
     background: rgba(0, 0, 0,0.2);
     margin: auto;
+    margin-bottom: 50px;
     padding-top: 40px;
     padding-bottom: 10px;
     border-radius: 10px;
@@ -86,6 +93,7 @@ and open the template in the editor.
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 0px;
+    margin: 0;
 }
 
 
@@ -101,7 +109,7 @@ and open the template in the editor.
 }
 
 .btn-default:hover{
-    background-color: #03A678;
+    background-color: $colorPricipal;
 }
 
 .btn.btn-default a{

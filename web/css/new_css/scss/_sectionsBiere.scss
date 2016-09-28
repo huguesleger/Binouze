@@ -39,6 +39,9 @@ and open the template in the editor.
 .produits{ 
   margin-bottom: 20px;
   overflow: auto;
+  h2{
+      text-align: center;
+  }
 }
 
 .saison1{
