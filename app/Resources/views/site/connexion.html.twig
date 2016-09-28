@@ -1,16 +1,50 @@
 {% extends ":site:index.html.twig" %}
 
 {% block section %}
-    <div class="header">
-        <form action="" id="connexion" method="POST">
-           
-                <input id="nom" name="identifiant" placeholder="Identifiant" type="text" class="col-xs-3 col-xs-offset-2">
-                <input id="email" name="mdp" placeholder="Mot de passe " type="text" class="col-xs-3 col-xs-offset-2">
-                <span id="msg_email"></span>
-                <span id="msg_nom"></span>
-            <p>
-                <input class="btn-envoyer col-xs-2 col-xs-offset-8" type="submit" value="Envoyer" />
-            </p>
-        </form>
+    <div class="header header-conect">
+        <div class="container">
+            <div class="logo">
+                <img src="{{ asset('images/minLogo.png') }}"/>
+            </div>  
+            <div class="title">
+                <h1>Connexion</h1>
+            </div>
+            <div class="conect">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Se souvenir de moi
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default"><a href="{{path("home")}}">Connexion</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 {% endblock%}
