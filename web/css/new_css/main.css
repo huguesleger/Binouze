@@ -288,7 +288,7 @@ span {
 /*------------section contact-----------*/
 .info {
   position: relative;
-  background-image: url("../../images/259H.jpg");
+  background-image: url("../../images/44975764_ml.jpg");
   background-attachment: fixed;
   padding-bottom: 50px;
   padding-top: 30px; }
@@ -297,6 +297,13 @@ span {
   top: 0;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%; }
+
+.opaque2 {
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%; }
 
@@ -446,7 +453,7 @@ and open the template in the editor.
 */
 .title-biere {
   position: relative;
-  background-image: url("../../images/188H.jpg");
+  background-image: url("../../images/1920391-inline.jpg");
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -471,10 +478,14 @@ and open the template in the editor.
   margin-bottom: 20px;
   overflow: auto; }
   .produits h2 {
-    text-align: center; }
+    text-align: left;
+    border-bottom: 1px solid #000;
+    margin-left: -50px;
+    padding-bottom: 25px;
+    color: #000; }
 
 .saison1 {
-  background-color: #F6D983; }
+  background-color: #95C91C; }
 
 .saison2 {
   background-color: #AFE239; }
@@ -489,9 +500,7 @@ and open the template in the editor.
   width: 40%;
   overflow: hidden; }
   .present-biere-left img {
-    width: 100%;
-    margin-top: -250px;
-    margin-bottom: -250px; }
+    width: 100%; }
 
 .present-biere-right {
   float: right;
@@ -500,26 +509,60 @@ and open the template in the editor.
   width: 40%;
   overflow: hidden; }
   .present-biere-right img {
-    width: 100%;
-    margin-top: -85px;
-    margin-bottom: -85px; }
+    width: 100%; }
 
 .present-txt-right {
+  padding-top: 70px;
   width: 60%;
   float: right;
   display: inline-block; }
   .present-txt-right .container {
     width: 60%; }
-  .present-txt-right p {
-    overflow-wrap: break-word; }
+  .present-txt-right .composition {
+    overflow-wrap: break-word;
+    margin-left: -50px;
+    padding-top: 20px; }
 
 .present-txt-left {
+  padding-top: 70px;
   width: 60%;
   display: inline-block; }
   .present-txt-left .container {
     width: 60%; }
-  .present-txt-left p {
-    overflow-wrap: break-word; }
+
+.composition {
+  overflow-wrap: break-word;
+  margin-left: -50px;
+  padding-top: 20px;
+  padding-bottom: 30px; }
+
+.degres {
+  margin-left: -20px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.icone-hublon {
+  width: 64px;
+  height: 64px;
+  background-image: url("../../images/icone-hublon.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 23%;
+  margin-top: 5px; }
+
+.table-bordered {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 0 solid transparent;
+  border-left: 0 solid transparent; }
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+  border: 0px solid #000;
+  text-align: center;
+  color: #000; }
+
+.table-bordered tr .separation-degres {
+  border-right: 1px solid #000; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -534,8 +577,8 @@ and open the template in the editor.
   padding-bottom: 0;
   margin: 0; }
 
-.header-conect .container {
-  background-image: url("../../images/web.png");
+.header-conect .container-fluid {
+  background-image: url("../../images/1920391-inline.jpg");
   background-size: cover;
   padding: 0; }
 
@@ -546,22 +589,22 @@ and open the template in the editor.
   padding-top: 20px; }
 
 .title {
-  color: #000;
+  color: #fff;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   margin-right: 40%;
   margin-left: 40%;
   margin-bottom: 50px; }
 
 .conect {
   width: 400px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   margin: auto;
   margin-bottom: 50px;
   padding-top: 40px;
   padding-bottom: 10px;
   border-radius: 10px;
-  border: 3px solid rgba(0, 0, 0, 0.5); }
+  border: 3px solid rgba(255, 255, 255, 0.8); }
 
 .form-group {
   width: 400px;
@@ -599,7 +642,8 @@ and open the template in the editor.
   border-radius: 0; }
 
 .btn.btn-default {
-  transition: 0.4s; }
+  transition: 0.4s;
+  margin-right: -15px; }
 
 .btn-default:hover {
   background-color: #F6D983; }
@@ -610,7 +654,7 @@ and open the template in the editor.
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 100px;
-  padding-left: 105px; }
+  padding-left: 100px; }
 
 .copy {
   color: #fff;
