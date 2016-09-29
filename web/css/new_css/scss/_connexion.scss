@@ -12,8 +12,8 @@ and open the template in the editor.
     padding-bottom: 0;
     margin: 0;
 }
-.header-conect .container{
-    background-image: url('../../images/web.png');
+.header-conect .container-fluid{
+    background-image: url('../../images/1920391-inline.jpg');
     background-size: cover;
     padding: 0;
 }
@@ -28,9 +28,9 @@ and open the template in the editor.
 
 
 .title{
-    color: #000;
+    color: #fff;
     text-align: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     margin-right: 40%;
     margin-left: 40%;
     margin-bottom: 50px;
@@ -40,13 +40,13 @@ and open the template in the editor.
 
 .conect{
     width: 400px;
-    background: rgba(0, 0, 0,0.2);
+    background: rgba(0, 0, 0,0.5);
     margin: auto;
     margin-bottom: 50px;
     padding-top: 40px;
     padding-bottom: 10px;
     border-radius: 10px;
-    border: 3px solid rgba(0, 0, 0,0.5);
+    border: 3px solid rgba(255, 255, 255,0.8);
 }
 
 
@@ -106,6 +106,8 @@ and open the template in the editor.
 
 .btn.btn-default{
     transition: 0.4s;
+    margin-right: -15px;
+  
 }
 
 .btn-default:hover{
@@ -118,7 +120,7 @@ and open the template in the editor.
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 100px;
-    padding-left: 105px;
+    padding-left: 100px;
 }
 
 

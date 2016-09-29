@@ -11,7 +11,7 @@ and open the template in the editor.
 
 .title-biere{
     position: relative;
-    background-image: url('../../images/188H.jpg');
+    background-image: url('../../images/1920391-inline.jpg');
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
@@ -36,16 +36,20 @@ and open the template in the editor.
     text-align: center;
     
 }
-.produits{ 
+.produits{
   margin-bottom: 20px;
   overflow: auto;
-  h2{
-      text-align: center;
+    h2{
+      text-align: left;
+      border-bottom: 1px solid #000;
+      margin-left: -50px;
+      padding-bottom: 25px;
+      color: #000;
   }
 }
 
 .saison1{
-  background-color: $colorPricipal; 
+  background-color: $vert; 
 
 }
 .saison2{
@@ -67,8 +71,7 @@ padding-right: 0;
     overflow: hidden;
     img{
         width: 100%;
-        margin-top: -250px;
-        margin-bottom: -250px;
+
     }
 
 }
@@ -81,33 +84,75 @@ padding-right: 0;
     overflow: hidden;
     img{
         width: 100%;
-        margin-top: -85px;
-        margin-bottom: -85px;
+
     }
 
 }
 .present-txt-right{
+    padding-top: 70px;
     width: 60%;
     float: right;
     display: inline-block;
     .container{
         width: 60%;
     }
-    p{
+    .composition{
         overflow-wrap: break-word;
+        margin-left: -50px;
+        padding-top: 20px;
     }
 }
 
 .present-txt-left{
+     padding-top: 70px;
     width: 60%;
     display: inline-block;
     .container{
         width: 60%;
     }
-    p{
-        overflow-wrap: break-word;
-    }
+
 }
 
+.composition{
+        overflow-wrap: break-word;
+        margin-left: -50px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .degres{
+       
+        margin-left: -20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .ibu{
+        
+    }
+    
 
+.icone-hublon{
+    width: 64px;
+    height: 64px;
+    background-image: url('../../images/icone-hublon.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 5px;
+}
 
+.table-bordered {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: 0 solid transparent;
+    border-left:  0 solid transparent;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 0px solid #000;
+    text-align: center;
+    color: #000;
+}
+
+.table-bordered tr .separation-degres{
+     border-right: 1px solid #000;
+}
