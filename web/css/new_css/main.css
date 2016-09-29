@@ -5,7 +5,8 @@
 
 .navbar {
   padding-bottom: 28px !important;
-  transition: padding 0.5s; }
+  transition: padding 0.5s;
+  margin-bottom: 0; }
 
 .navbar-min {
   min-height: 15px;
@@ -93,10 +94,6 @@
 /*--------------fin-nav-------------------*/
 body {
   background-color: #f9f9f9; }
-
-.header {
-  padding-top: 15%;
-  padding-bottom: 40px; }
 
 h1, h2, h3 {
   text-transform: uppercase; }

@@ -34,27 +34,27 @@
     {% block body %}
 
     {% endblock %}
-    
+
     <div class="ob">
         <object data='{% block data %}http://localhost/binouze/web/app_dev.php/{%endblock %}'></object>
     </div>
     {% block javascripts %}
-        
+
     {% endblock %}
     <style>
-            .ob{
-                width: 100%;
-                padding-top: 200px;
-            }
-            object{
-                width: 80%;
-                margin-left: 128.5px;
-                height: 500px;
-                border: 2px solid #000;
-            }
-            object:hover{
-                
-            }
-        </style>
+        .ob{
+            width: 100%;
+            padding-top: 200px;
+        }
+        object{
+            width: 80%;
+            margin-left: 128.5px;
+            height: 500px;
+            border: 2px solid #000;
+        }
+        object:hover{
+
+        }
+    </style>
 </body>
 </html>

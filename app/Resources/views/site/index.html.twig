@@ -30,22 +30,18 @@
                             </div>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li class="scroll active"><a href="{{path('brass')}}">Brasserie<span class="sr-only">(current)</span></a></li>
-                                    <li class="scroll"><a href="{{path('biere')}}">Bières</a></li>
-                                    <li class="scroll"><a href="{{path('fab')}}">Fabrication</a></li>
-
-
+                                    <li><a href="{{path('brass')}}">Brasserie<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="{{path('biere')}}">Bières</a></li>
+                                    <li><a href="{{path('fab')}}">Fabrication</a></li>
                                     <div class="navbar-header">
                                         <a class="navbar-brand" href="{{path('home')}}">
                                             <img src="{{asset('./images/logo.png')}}" alt="logo">
                                         </a>
-
                                     </div>
-                                    <li class="scroll"><a href="{{path('actu')}}">Actualités</a></li>
-                                    <li class="scroll"><a href="{{path('contact')}}">Contact</a></li>
-                                    <li class="scroll"><a href="{{path('connec')}}">Connexion</a></li>
+                                    <li><a href="{{path('actu')}}">Actualités</a></li>
+                                    <li><a href="{{path('contact')}}">Contact</a></li>
+                                    <li><a href="{{path('connec')}}">Connexion</a></li>
                                 </ul>
-
                             </div><!-- navbar-collapse -->
                         </div>
                     </nav>
@@ -53,10 +49,8 @@
             </div>
             <!--fin-nav-->
             {% block section %}
-
                 <header class="header">
                     <div class="container">
-
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <!--<ol class="carousel-indicators">
@@ -65,13 +59,11 @@
                             <li data-target="#myCarousel" data-slide-to="2"></li>
                             <li data-target="#myCarousel" data-slide-to="3"></li>
                         </ol>-->
-
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                     <img src="{{asset('./images/bg.jpg')}}" alt="Chania">
                                 </div>
-
                                 <div class="item">
                                     <img src="{{asset('./images/188H.jpg')}}" alt="Chania">
                                 </div>

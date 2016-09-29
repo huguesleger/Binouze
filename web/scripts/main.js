@@ -14,10 +14,17 @@ $(window).on('scroll', function () {
         $('.navbar-main').removeClass('navbar-nav-min');
     }
 });
-//$(document).ready(function(){
-//    $('li').click(function(){
-//        $
-//        $('li').removeClass('active');
-//        $(this).addClass('active');
-//    });
-//});
+$(document).ready(function () {
+//    réglage hauteur navbar/section
+    var hauteurNavbar = $('.navbar').innerHeight();
+    $('.header').css('padding-top', +hauteurNavbar + 'px');
+
+    $('li').click(function () {
+        var classe = $(this).attr('class');
+        if (classe === 'active') {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+});
