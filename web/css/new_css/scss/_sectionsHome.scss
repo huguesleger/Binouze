@@ -1,0 +1,221 @@
+@import "variable";
+/*----------section acceuil-------------*/
+/*----------section produit biere-------------*/
+
+/*------------accueil-----------*/
+/*------------section produit-----------*/
+.produit{
+    width: 100%;
+    background-color: $colorPricipal;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.biere img{
+    position: relative;
+    margin: auto;
+    display: block;
+}
+
+.ombre-sol{
+    margin-top: 30%;
+    position: absolute;
+    width: 100%;
+    height: 152px;
+    background-image: url('../../images/patternFond.png');
+    background-repeat: repeat;
+    opacity: 0.3;
+
+}
+
+.grad-clair{
+    margin-top: -150px;
+    margin-left: 510px;
+    position: absolute;
+    background-image: url('../../images/biereColor1.png');
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 145px;
+}
+
+.grad-moyen{
+    margin-top: -241px;
+    margin-left: 510px;
+    position: absolute;
+    background-image: url('../../images/biereColor2.png');
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 145px;
+}
+
+.grad-fonce{
+    margin-top: -380px;
+    margin-left: 510px;
+    position: absolute;
+    background-image: url('../../images/biereColor3.png');
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 145px;
+}
+
+.description-left{
+    margin-top: -500px;
+    margin-left: 130px;
+    width: 400px;
+    height: 500px;
+
+    position: absolute;
+}
+
+.trait-clair{
+    padding-top: 10px;
+    margin-top: 100px;
+    margin-left: 100px;
+    background-image: url('../../images/biereTrait1.png');
+    background-repeat: no-repeat;
+    width: 301px;
+    height: 200px;
+    p{
+        color:#fff;
+        margin-left: -50px;
+        margin-top: -40px;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}
+
+.trait-fonce{
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-left: 200px;
+    background-image: url('../../images/biereTrait3.png');
+    background-repeat: no-repeat;
+    width: 277px;
+    height: 247px;
+    p{
+        color:#fff;
+        margin-top:-70px;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}
+
+.description-right{
+    margin-top: -500px;
+    margin-left:450px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+}
+
+.trait-moyen{
+    padding-top: 10px;
+    margin-top: 200px;
+    margin-left: 130px;
+    background-image: url('../../images/biereTrait2.png');
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 247px;
+    p{
+        color:#fff;
+        margin-top:-70px;
+        font-size: 19px;
+        font-weight: 700;
+        padding-left:330px;
+        padding-top: 10px;
+
+    }
+}
+.btn{
+    float: right;
+}
+.btn-biere{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    right: 20%;
+    margin-top: -25px;
+}
+.btn-biere:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ffffff;
+    color: #000;
+}
+
+.btn-biere:active{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ffffff;
+    color: #000;
+}
+
+.btn:active,
+.btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/*------------fin section produit-----------*/
+/*------------section contact-----------*/
+.info{
+ position: relative;
+ background-image: url('../../images/259H.jpg');
+ background-attachment: fixed;
+ padding-bottom: 50px;
+ padding-top: 30px;
+}
+.opaque{
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+}
+.caption{
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    p{
+        text-align: center
+    }
+}
+
+.icon {
+  margin-bottom:10px; /*-----reglage position txt-------*/
+  padding-top: 8px; /*-----reglage hauteur icon-------*/
+  font-size: 35px;  /*-----reglage size icon-------*/
+  color:$colorPricipal; /*-----color icon-------*/
+  width: 70px; /*-----------taille background icon--------*/
+  height:70px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  text-align: center;
+  transition: 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+    
+ }
+
+ .thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: transparent;
+  border: 0px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #fff;
+}

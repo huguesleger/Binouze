@@ -1,0 +1,634 @@
+/*---------------nav-------------------*/
+.main {
+  background-color: #fff;
+  /*----choise-color-menu----*/ }
+
+.navbar {
+  padding-bottom: 28px !important;
+  transition: padding 0.5s;
+  margin-bottom: 0; }
+
+.navbar-min {
+  min-height: 15px;
+  padding-bottom: 0px !important;
+  transition: padding 0.5s; }
+
+.navbar-main {
+  border: none; }
+
+.navbar-nav li a {
+  font-size: 15px;
+  text-transform: uppercase;
+  padding-top: 75px;
+  line-height: 42px;
+  transition: padding 0.3s; }
+
+.navbar-nav-min li a {
+  font-size: 19px;
+  text-transform: uppercase;
+  padding-top: 22px;
+  line-height: 42px;
+  transition: padding 0.3s; }
+
+.navbar-main .navbar-nav > li > a {
+  color: #777;
+  cursor: pointer; }
+
+.navbar-main .navbar-nav > li > a:hover,
+.navbar-main .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent; }
+
+.navbar-main .navbar-nav > .active > a,
+.navbar-main .navbar-nav > .active > a:hover,
+.navbar-main .navbar-nav > .active > a:focus {
+  color: #000;
+  border-bottom: 2px solid #F6D983;
+  background-color: transparent; }
+
+.navbar-main .navbar-toggle .icon-bar {
+  background-color: #000; }
+
+.navbar-brand {
+  height: 86px;
+  padding-top: 10px;
+  transition: 0.4s; }
+  .navbar-brand img {
+    padding-left: 40px;
+    padding-right: 20px; }
+
+.navbar-brand-min img {
+  height: 66px;
+  padding-top: 10px;
+  transition: 0.4s; }
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  transition: 0.5s; }
+
+.social img {
+  width: 32px;
+  height: 32px;
+  padding-top: 0; }
+
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  background: rgba(255, 255, 255, 0.9); }
+
+.navbar-collapse {
+  overflow-x: visible;
+  border-top: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-bottom: 0px; } }
+@media (min-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    float: none;
+    margin: 0; } }
+/*--------------fin-nav-------------------*/
+body {
+  background-color: #f9f9f9; }
+
+h1, h2, h3 {
+  text-transform: uppercase; }
+
+p {
+  text-align: justify; }
+
+footer {
+  background-color: #111111;
+  color: white;
+  padding-top: 10px; }
+  footer div {
+    display: flex;
+    justify-content: center; }
+    footer div p {
+      padding-top: 20px; }
+    footer div img {
+      padding-left: 5px; }
+
+span {
+  font-size: 10px;
+  padding-left: 25px; }
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .fa-angle-left,
+.carousel-control .fa-angle-right {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 5;
+  display: inline-block;
+  font-size: 70px; }
+
+.carousel-control .icon-prev,
+.carousel-control .fa-angle-left {
+  left: 50%;
+  margin-left: -10px; }
+
+.carousel-control .icon-next,
+.carousel-control .fa-angle-right {
+  right: 50%;
+  margin-right: -10px; }
+
+.carousel-control.left {
+  background-image: none; }
+
+.carousel-control.right {
+  background-image: none; }
+
+/*----------section acceuil-------------*/
+/*----------section produit biere-------------*/
+/*------------accueil-----------*/
+/*------------section produit-----------*/
+.produit {
+  width: 100%;
+  background-color: #F6D983;
+  padding-top: 90px;
+  padding-bottom: 40px; }
+
+.biere img {
+  position: relative;
+  margin: auto;
+  display: block; }
+
+.ombre-sol {
+  margin-top: 30%;
+  position: absolute;
+  width: 100%;
+  height: 152px;
+  background-image: url("../../images/patternFond.png");
+  background-repeat: repeat;
+  opacity: 0.3; }
+
+.grad-clair {
+  margin-top: -150px;
+  margin-left: 510px;
+  position: absolute;
+  background-image: url("../../images/biereColor1.png");
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 145px; }
+
+.grad-moyen {
+  margin-top: -241px;
+  margin-left: 510px;
+  position: absolute;
+  background-image: url("../../images/biereColor2.png");
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 145px; }
+
+.grad-fonce {
+  margin-top: -380px;
+  margin-left: 510px;
+  position: absolute;
+  background-image: url("../../images/biereColor3.png");
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 145px; }
+
+.description-left {
+  margin-top: -500px;
+  margin-left: 130px;
+  width: 400px;
+  height: 500px;
+  position: absolute; }
+
+.trait-clair {
+  padding-top: 10px;
+  margin-top: 100px;
+  margin-left: 100px;
+  background-image: url("../../images/biereTrait1.png");
+  background-repeat: no-repeat;
+  width: 301px;
+  height: 200px; }
+  .trait-clair p {
+    color: #fff;
+    margin-left: -50px;
+    margin-top: -40px;
+    font-size: 19px;
+    font-weight: 700; }
+
+.trait-fonce {
+  padding-top: 10px;
+  margin-top: 0px;
+  margin-left: 200px;
+  background-image: url("../../images/biereTrait3.png");
+  background-repeat: no-repeat;
+  width: 277px;
+  height: 247px; }
+  .trait-fonce p {
+    color: #fff;
+    margin-top: -70px;
+    font-size: 19px;
+    font-weight: 700; }
+
+.description-right {
+  margin-top: -500px;
+  margin-left: 450px;
+  width: 400px;
+  height: 500px;
+  position: absolute; }
+
+.trait-moyen {
+  padding-top: 10px;
+  margin-top: 200px;
+  margin-left: 130px;
+  background-image: url("../../images/biereTrait2.png");
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 247px; }
+  .trait-moyen p {
+    color: #fff;
+    margin-top: -70px;
+    font-size: 19px;
+    font-weight: 700;
+    padding-left: 330px;
+    padding-top: 10px; }
+
+.btn {
+  float: right; }
+
+.btn-biere {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  color: #fff;
+  padding: 15px;
+  position: absolute;
+  right: 20%;
+  margin-top: -25px; }
+
+.btn-biere:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
+  color: #000; }
+
+.btn-biere:active {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
+  color: #000; }
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/*------------fin section produit-----------*/
+/*------------section contact-----------*/
+.info {
+  position: relative;
+  background-image: url("../../images/259H.jpg");
+  background-attachment: fixed;
+  padding-bottom: 50px;
+  padding-top: 30px; }
+
+.opaque {
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%; }
+
+.caption h3 {
+  text-align: center;
+  text-transform: uppercase; }
+.caption p {
+  text-align: center; }
+
+.icon {
+  margin-bottom: 10px;
+  /*-----reglage position txt-------*/
+  padding-top: 8px;
+  /*-----reglage hauteur icon-------*/
+  font-size: 35px;
+  /*-----reglage size icon-------*/
+  color: #F6D983;
+  /*-----color icon-------*/
+  width: 70px;
+  /*-----------taille background icon--------*/
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  text-align: center;
+  transition: 0.3s;
+  margin-left: auto;
+  margin-right: auto; }
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: transparent;
+  border: 0px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out; }
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #fff; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 13:24:18
+    Author     : sebastien
+*/
+.header-brass {
+  padding-bottom: 0; }
+
+.img-responsive {
+  margin: auto; }
+
+.brasserie, .presentation {
+  background-color: #F6D983;
+  margin: auto; }
+  .brasserie h1, .presentation h1 {
+    text-align: center; }
+
+.presentation h3 {
+  margin: 0 0 5px 0;
+  padding: 0; }
+
+.margin {
+  margin: 50px auto; }
+
+.margin-min {
+  margin: 25px 0; }
+
+.libre {
+  padding: 0 15px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 15:45:19
+    Author     : sebastien
+*/
+.header-contact {
+  padding-bottom: 0; }
+
+.formulaire {
+  padding: 25px;
+  height: 350px;
+  background-image: url("../../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+input {
+  margin: 15px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 900;
+  border: 1px solid white;
+  border-radius: 2px; }
+
+textarea {
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 900;
+  border: 1px solid white;
+  border-radius: 2px; }
+
+::-webkit-input-placeholder {
+  color: white; }
+
+::-moz-placeholder {
+  color: white; }
+
+.trouver {
+  margin-top: 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: white; }
+
+.sep {
+  padding-bottom: 10px;
+  border-bottom: 2px solid gray; }
+
+.cont {
+  margin-top: 40px; }
+
+.cont p {
+  margin-top: 20px; }
+
+#map {
+  height: 500px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 16:23:40
+    Author     : hugues
+*/
+.title-biere {
+  position: relative;
+  background-image: url("../../images/188H.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  color: #fff; }
+  .title-biere h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    position: relative; }
+
+.description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: justify;
+  position: relative; }
+
+.name-biere {
+  text-align: center; }
+
+.produits {
+  margin-bottom: 20px;
+  overflow: auto; }
+  .produits h2 {
+    text-align: center; }
+
+.saison1 {
+  background-color: #F6D983; }
+
+.saison2 {
+  background-color: #AFE239; }
+
+.produits .container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+
+.present-biere-left {
+  margin-bottom: -5px;
+  display: inline-block;
+  width: 40%;
+  overflow: hidden; }
+  .present-biere-left img {
+    width: 100%;
+    margin-top: -250px;
+    margin-bottom: -250px; }
+
+.present-biere-right {
+  float: right;
+  margin-bottom: -5px;
+  display: inline-block;
+  width: 40%;
+  overflow: hidden; }
+  .present-biere-right img {
+    width: 100%;
+    margin-top: -85px;
+    margin-bottom: -85px; }
+
+.present-txt-right {
+  width: 60%;
+  float: right;
+  display: inline-block; }
+  .present-txt-right .container {
+    width: 60%; }
+  .present-txt-right p {
+    overflow-wrap: break-word; }
+
+.present-txt-left {
+  width: 60%;
+  display: inline-block; }
+  .present-txt-left .container {
+    width: 60%; }
+  .present-txt-left p {
+    overflow-wrap: break-word; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 sept. 2016, 14:21:12
+    Author     : sebastien
+*/
+.header-conect {
+  padding-bottom: 0;
+  margin: 0; }
+
+.header-conect .container {
+  background-image: url("../../images/web.png");
+  background-size: cover;
+  padding: 0; }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px; }
+
+.title {
+  color: #000;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  margin-right: 40%;
+  margin-left: 40%;
+  margin-bottom: 50px; }
+
+.conect {
+  width: 400px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: auto;
+  margin-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.5); }
+
+.form-group {
+  width: 400px;
+  padding-right: 30px; }
+
+.checkbox {
+  color: #fff;
+  margin-left: 15px; }
+
+.form-group .checkbox {
+  margin-top: 10px; }
+
+.form-group .btn {
+  margin-left: 15px;
+  width: 100%;
+  padding-left: 0;
+  border-radius: 0;
+  border: 0; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin: 0; }
+
+.input-group-addon {
+  border-radius: 0; }
+
+.btn.btn-default {
+  transition: 0.4s; }
+
+.btn-default:hover {
+  background-color: #F6D983; }
+
+.btn.btn-default a {
+  color: #555;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 100px;
+  padding-left: 105px; }
+
+.copy {
+  color: #fff;
+  padding-top: 50px;
+  margin-bottom: 20px;
+  margin-right: 40%;
+  margin-left: 40%;
+  text-align: center;
+  border-bottom: 1px solid #fff; }
+
+.icone {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px; }
+
+.icone img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; }
+
+/*# sourceMappingURL=main.css.map */

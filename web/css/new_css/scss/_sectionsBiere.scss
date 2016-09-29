@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 sept. 2016, 16:23:40
+    Author     : hugues
+*/
+@import "_variable.scss";
+
+.title-biere{
+    position: relative;
+    background-image: url('../../images/188H.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    h1{
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        margin-top: 0;
+        position: relative;
+    }
+}
+
+.description{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: justify;
+    position: relative;
+}
+
+.name-biere{
+    text-align: center;
+    
+}
+.produits{ 
+  margin-bottom: 20px;
+  overflow: auto;
+  h2{
+      text-align: center;
+  }
+}
+
+.saison1{
+  background-color: $colorPricipal; 
+
+}
+.saison2{
+  background-color: $vertPale;  
+
+}
+.produits .container-fluid{
+padding-left: 0;
+padding-right: 0;
+
+
+}
+
+
+.present-biere-left{
+    margin-bottom: -5px;
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+    img{
+        width: 100%;
+        margin-top: -250px;
+        margin-bottom: -250px;
+    }
+
+}
+.present-biere-right{
+     
+    float: right;
+    margin-bottom: -5px;
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+    img{
+        width: 100%;
+        margin-top: -85px;
+        margin-bottom: -85px;
+    }
+
+}
+.present-txt-right{
+    width: 60%;
+    float: right;
+    display: inline-block;
+    .container{
+        width: 60%;
+    }
+    p{
+        overflow-wrap: break-word;
+    }
+}
+
+.present-txt-left{
+    width: 60%;
+    display: inline-block;
+    .container{
+        width: 60%;
+    }
+    p{
+        overflow-wrap: break-word;
+    }
+}
+
+
+

@@ -1,0 +1,61 @@
+{% extends ":site:index.html.twig" %}
+
+{% block section %}
+    <div class="header header-contact">
+        <div id="formulaire" class="formulaire">
+            <div id="form_contact" class="col-xs-12">
+                <form action="" id="contact" method="POST">
+                    <p>
+                        <input id="nom" name="nom" placeholder="NOM" type="text" class="col-xs-3 col-xs-offset-2">
+                        <input id="email" name="email" placeholder="EMAIL" type="email" class="col-xs-3 col-xs-offset-2">
+                        <span id="msg_email"></span>
+                        <span id="msg_nom"></span>
+                    </p>
+                    <p>
+                        <textarea id="message" placeholder="MESSAGE" name="message" rows="10" cols="50" class="col-xs-8 col-xs-offset-2"></textarea>
+                        <span id="msg_message"></span>
+                    </p>
+                    <p>
+                        <input class="btn-envoyer col-xs-2 col-xs-offset-8" type="submit" value="Envoyer" />
+                    </p>
+                </form>
+                <span id="msg_all"></span> 
+            </div>
+        </div>
+        <h1 class="trouver">
+            ou nous trouver
+        </h1>        
+        <div class="container">
+            <div class="col-lg-6 col-sm-12">
+                <h2>BRASSERIE RASPAILLAC</h2>
+                <p>51 rue Raspaillac</p>
+                <p class="sep">34390 Raspaillac</p>
+                <p>10h-10h30</p>
+                <p>18h-19h</p>
+                <p>du lundi au jeudi</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 cont">
+                <img class="col-xs-2" src="{{asset('./images/icon-mail.png')}}" alt="mail">
+                <p class="col-lg-6 col-sm-12">contact@respaillac.com</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 cont">
+                <img class="col-xs-2" src="{{asset('./images/icon-tel.png')}}" alt="tel">
+                <p class="col-lg-6 col-sm-12">04.67.60.35.95</p>
+            </div>
+        </div>
+        <div id="map">
+        </div>
+        <script>
+            function myMap() {
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {
+                    center: new google.maps.LatLng(51.5, -0.2),
+                    zoom: 10
+                };
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                return map;
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
+    </div>
+{%endblock%}
