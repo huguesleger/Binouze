@@ -18,13 +18,6 @@ $(document).ready(function () {
 //    réglage hauteur navbar/section
     var hauteurNavbar = $('.navbar').innerHeight();
     $('.header').css('padding-top', +hauteurNavbar + 'px');
+    $('.header-conect .container-fluid').height($(window).height()+ 'px');
 
-    $('li').click(function () {
-        var classe = $(this).attr('class');
-        if (classe === 'active') {
-            $(this).removeClass('active');
-        } else {
-            $(this).addClass('active');
-        }
-    });
 });

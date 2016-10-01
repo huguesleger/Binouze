@@ -14,16 +14,21 @@ and open the template in the editor.
 .img-responsive{
     margin: auto;
 }
-.brasserie, .presentation{
+.brasserie, .legale{
     background-color: $colorPricipal;
     margin: auto;
     h1{
         text-align: center
     }
 }
-.presentation h3{
-    margin: 0 0 5px 0;
-    padding: 0;
+
+.legale {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    p{
+        margin-bottom: 0;
+        text-align: center;
+    }
 }
 .margin{
     margin: 50px auto;

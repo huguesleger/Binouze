@@ -117,6 +117,9 @@ span {
   font-size: 10px;
   padding-left: 25px; }
 
+.carousel {
+  padding-bottom: 30px; }
+
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
 .carousel-control .fa-angle-left,
@@ -160,13 +163,12 @@ span {
   display: block; }
 
 .ombre-sol {
-  margin-top: 30%;
+  margin-top: 25%;
   position: absolute;
   width: 100%;
-  height: 152px;
-  background-image: url("../../images/patternFond.png");
-  background-repeat: repeat;
-  opacity: 0.3; }
+  height: 285px;
+  background-image: url("../../images/fond-bois.png");
+  background-repeat: no-repeat; }
 
 .grad-clair {
   margin-top: -150px;
@@ -205,7 +207,7 @@ span {
 .trait-clair {
   padding-top: 10px;
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: 140px;
   background-image: url("../../images/biereTrait1.png");
   background-repeat: no-repeat;
   width: 301px;
@@ -220,7 +222,7 @@ span {
 .trait-fonce {
   padding-top: 10px;
   margin-top: 0px;
-  margin-left: 200px;
+  margin-left: 220px;
   background-image: url("../../images/biereTrait3.png");
   background-repeat: no-repeat;
   width: 277px;
@@ -265,7 +267,7 @@ span {
   padding: 15px;
   position: absolute;
   right: 20%;
-  margin-top: -25px; }
+  margin-top: -85px; }
 
 .btn-biere:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -291,7 +293,10 @@ span {
   background-image: url("../../images/44975764_ml.jpg");
   background-attachment: fixed;
   padding-bottom: 50px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-top: 45px; }
+  .info h3, .info p {
+    color: #fff; }
 
 .opaque {
   top: 0;
@@ -345,8 +350,7 @@ span {
   transition: border .2s ease-in-out; }
 
 .thumbnail .caption {
-  padding: 9px;
-  color: #fff; }
+  padding: 9px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -363,15 +367,18 @@ and open the template in the editor.
 .img-responsive {
   margin: auto; }
 
-.brasserie, .presentation {
+.brasserie, .legale {
   background-color: #F6D983;
   margin: auto; }
-  .brasserie h1, .presentation h1 {
+  .brasserie h1, .legale h1 {
     text-align: center; }
 
-.presentation h3 {
-  margin: 0 0 5px 0;
-  padding: 0; }
+.legale {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .legale p {
+    margin-bottom: 0;
+    text-align: center; }
 
 .margin {
   margin: 50px auto; }
@@ -578,7 +585,7 @@ and open the template in the editor.
   margin: 0; }
 
 .header-conect .container-fluid {
-  background-image: url("../../images/1920391-inline.jpg");
+  background-image: url("../../images/glass-of-beer-1559924.jpg");
   background-size: cover;
   padding: 0; }
 
@@ -674,5 +681,82 @@ and open the template in the editor.
   width: 30px;
   height: 30px;
   margin-right: 10px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 sept. 2016, 11:11:47
+    Author     : hugues
+*/
+.title-fabrication {
+  position: relative;
+  background-image: url("../../images/44975764_ml.jpg");
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+  padding-top: 150px;
+  padding-bottom: 150px; }
+  .title-fabrication h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    position: relative; }
+
+.presentation {
+  background-color: #F6D983;
+  margin: auto; }
+  .presentation h1 {
+    text-align: center; }
+
+.presentation h3 {
+  margin: 0 0 5px 0;
+  padding: 0; }
+
+.margin {
+  margin: 50px auto; }
+
+.margin-min {
+  margin: 25px 0; }
+
+.ingredient {
+  margin-top: 30px; }
+
+.title-ingredient {
+  color: #000;
+  text-align: center;
+  padding-bottom: 20px; }
+
+.icon-ingredient {
+  margin-bottom: 10px;
+  /*-----reglage position txt-------*/
+  padding-top: 8px;
+  /*-----reglage hauteur icon-------*/
+  font-size: 35px;
+  /*-----reglage size icon-------*/
+  color: #000;
+  /*-----color icon-------*/
+  width: 70px;
+  /*-----------taille background icon--------*/
+  height: 70px;
+  border-radius: 50%;
+  background-color: #F6D983;
+  text-align: center;
+  transition: 0.3s;
+  margin-left: auto;
+  margin-right: auto; }
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #000; }
+
+.caption h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: -5px; }
 
 /*# sourceMappingURL=main.css.map */
