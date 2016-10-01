@@ -1,0 +1,13 @@
+{%extends ":admin:index.html.twig"%}
+
+    {% block body %}
+        <div class="header">
+       {# {% if id is defined%}
+            {{form_start(annonce,{'attr':{'action':path('update',{'id':id})}})}}
+        {% else%}#}
+            {{form_start(annonce,{'attr':{'action':path('valid')}})}}
+        {#{%endif%}#}
+        {{form_rest(annonce)}}
+        {{form_end(annonce)}}
+        </div>
+    {% endblock %}
