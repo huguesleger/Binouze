@@ -37,7 +37,6 @@ and open the template in the editor.
     
 }
 .produits{
-  margin-bottom: 20px;
   overflow: auto;
     h2{
       text-align: left;
@@ -48,6 +47,9 @@ and open the template in the editor.
   }
 }
 
+.produits.saison1{
+  margin-bottom: 20px;  
+}
 .saison1{
   background-color: $vert; 
 

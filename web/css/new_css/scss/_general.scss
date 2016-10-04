@@ -10,6 +10,13 @@ p{
     text-align: justify;
 }
 
+a:hover{
+    text-decoration: none;
+}
+a:focus {
+  color: none;
+  text-decoration: none;
+}
 footer{
     
     & div{
