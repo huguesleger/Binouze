@@ -16,8 +16,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-
-
 /**
  * Description of AdminController
  *
@@ -34,62 +32,79 @@ class AdminController extends Controller {
     }
 
     /**
-     * @Route("admin/bieres", name="adminbiere")
+     * @Route("admin/brasserie", name="adminbrass")
+     * @Template(":admin:brasserie.html.twig")
+     */
+    public function brasserieAdmin() {
+        
+    }
+
+    /**
+     * @Route("admin/biere", name="adminbiere")
      * @Template(":admin:biere.html.twig")
      */
-    public function getBieres(){
-        $em = $this->getDoctrine()->getEntityManager();
+    public function biereAdmin() {
+        $em = $this->getDoctrine()->getManager();
         $rsm = new ResultSetMappingBuilder($em);
-        $rsm->addRootEntityFromClassMetadata('AppBundle:Bieres', 'bieres');
+        $rsm->addRootEntityFromClassMetadata('AppBundle:Bieres', 'biere');
         $query = $em->createNativeQuery("select * from bieres", $rsm);
-        $project = $query->getResult();
-        return array ('projects' => $project);
+        $biere = $query->getResult();
+        return array('biereAdmin' => $biere);
     }
-    
-      /**
-     * @Route ("/admin/add",name="form")
-     * @Template (":admin:ajouter.html.twig")
-     * @param Request $request
-     */
-    public function formBieres(Request $request) {
-        //on créé un objet vide
-        $project = new Bieres();
-        //on lie un formulaire avec l'objet créé
-        $f= $this->createForm(BieresType::class, $project);
-       
-        return array("formNews" => $f->createView());
-    }
-    
+
     /**
-     * @Route ("/admin/val", name="valid")
+     * @Route("admin/ajouter", name="ajouter")
+     * @Template(":admin:ajouter.html.twig")
      */
-    public function addNews(Request $request) {
-       $niouzes = new Bieres();
-        //liaison de l'objet avec le formulaire temporaire
-        //creation du formulaire tampon
-        
-        $f = $this->createForm(BieresType::class, $niouzes);
-        //on fait quand meme une verif pour s'assurer d'avoir eu un POST comme requete http
-        if ($request->getMethod() == 'POST') {
-            //on lie le formulaire temporaire avec les valeurs de la requete de type post
-            //en gros on se retrouve avec un fork de notre formulaire en local ;) 
-            $f->handleRequest($request);
-//            
-//            $nomDuFichier = md5(uniqid()).".".$niouzes->getImage()->getClientOriginalExtension();
-//            $niouzes->getImage()->move('web/uploads/img', $nomDuFichier);
-//            $niouzes->setImage($nomDuFichier);
-            //Partie persistance des données ou l'on sauvegarde notre news en base de données
-            $em = $this->getDoctrine()->getEntityManager();
-            $em->persist($niouzes);
+    public function ajouterAdmin() {
+        $biere = $this->createForm(BieresType::class, new Bieres());
+        return array("biere" => $biere->createView());
+    }
+
+    /**
+     * @Route("/admin/valide",name="valid")
+     * @param Request $req
+     */
+    public function validation(Request $req) {
+        $b = new Bieres();
+        $biere = $this->createForm(BieresType::class,$b );
+        if ($req->getMethod() == 'POST') {
+            $biere->handleRequest($req);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($b);
             $em->flush();
-            //J'avoue n'avoir implementer aucun test pour m'assurer de la validité des données en database
-            //quoi qu'il en soit après avoir ajouter une news on appele la methode qui va nous afficher la liste des news
-            //Bien entendu j'utilise les alias pour le routage ;) 
-            //faire un redirect vers getNews();
             return $this->redirectToRoute('adminbiere');
         }
-        //si jamais le post a pas marché je reviens vers l'edition
-        //faire un redirect sur ajout de news
-        return $this->redirectToRoute('form');
+        return $this->redirectToRoute('ajouter');
     }
+
+    /**
+     * @Route("admin/fabrication", name="adminfab")
+     * @Template(":admin:fabrication.html.twig")
+     */
+    public function fabricationAdmin() {
+        
+    }
+
+    /**
+     * @Route("admin/actualite", name="adminactu")
+     * @Template(":admin:actualite.html.twig")
+     */
+    public function actualiteAdmin() {
+//        $em = $this->getDoctrine()->getManager();
+//        $rsm = new ResultSetMappingBuilder($em);
+//        $rsm->addRootEntityFromClassMetadata('AppBundle:Actualite', 'actualite');
+//        $query = $em->createNativeQuery("select * from actualite", $rsm);
+//        $actu = $query->getResult();
+//        return array('actu' => $actu);
+    }
+
+    /**
+     * @Route("admin/deconnexion", name="deco")
+     * @Template(":site:index.html.twig")
+     */
+    public function deconnexion() {
+        
+    }
+
 }

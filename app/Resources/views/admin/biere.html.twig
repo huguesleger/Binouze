@@ -2,30 +2,11 @@
 
 {% block body %}
     <div class="header">
-    <a href="{{path("form")}}">ajouter</a>
-    {%for biere in projects%}
-        <section class="produits saison1">
-            <div class="present-biere-left">
-                <img src="{{biere.images}}" alt="{#{{biere.images.name}}#}">
-            </div>
-            <div class="present-txt-right">
-                <div class="container">
-                    <div class="icone-hublon">
-                    </div>
-                    <h2>{{biere.nomsbieres}}</h2>
-                    <div class="composition">
-                        <p>
-                            {{biere.composition}}
-                        </p>
-                    </div>
-                    <table class="degres table table-bordered">
-                        <thead>
-                            <tr>
-                                <th class="separation-degres">Alcool : {{biere.degres}}</th>
-                                <th>Amertume IBU : {{biere.amertume}}</th>
-                            </tr>
-                        </thead>
-                    </table>
+        <a href="{{path("ajouter")}}">ajouter</a>
+        {%for biere in biereAdmin%}
+            <section class="produits saison1">
+                <div class="present-biere-left">
+                    <img src="{{asset('./images/') ~ biere.images~('.png')}}" alt="{#{{biere.images.name}}#}">
                 </div>
                 <div class="present-txt-right">
                     <div class="container">

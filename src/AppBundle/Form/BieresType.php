@@ -6,6 +6,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+
 class BieresType extends AbstractType {
 
     /**
@@ -19,8 +20,8 @@ class BieresType extends AbstractType {
                 ->add('composition')
                 ->add('degres')
                 ->add('amertume')
-                ->add('checked')
-                ->add('ajouter', \Symfony\Component\Form\Extension\Core\Type\SubmitType::class)
+                ->add('ajouter')
+                ->add('valider', SubmitType::class)
         ;
     }
 
