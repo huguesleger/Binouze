@@ -30,22 +30,20 @@ class AdminController extends Controller {
     public function homeAdmin() {
         
     }
-    
+
     /**
      * @Route("admin/brasserie", name="adminbrass")
      * @Template(":admin:brasserie.html.twig")
      */
-    public function brasserieAdmin()
-    {
-     
+    public function brasserieAdmin() {
+        
     }
-    
+
     /**
      * @Route("admin/biere", name="adminbiere")
      * @Template(":admin:biere.html.twig")
      */
-    public function biereAdmin()
-    {
+    public function biereAdmin() {
         $em = $this->getDoctrine()->getManager();
         $rsm = new ResultSetMappingBuilder($em);
         $rsm->addRootEntityFromClassMetadata('AppBundle:Bieres', 'biere');
@@ -53,58 +51,60 @@ class AdminController extends Controller {
         $biere = $query->getResult();
         return array('biereAdmin' => $biere);
     }
-    
+
     /**
      * @Route("admin/ajouter", name="ajouter")
      * @Template(":admin:ajouter.html.twig")
      */
-    public function ajouterAdmin()
-    {
-     $form = $this->createForm(BieresType::class,new Bieres());
-        return array("annonce" => $form->createView());
+    public function ajouterAdmin() {
+        $biere = $this->createForm(BieresType::class, new Bieres());
+        return array("biere" => $biere->createView());
     }
-    
+
     /**
-     * @Route("/admin/valid",name="valid")
-     * @param Request $request
+     * @Route("/admin/valide",name="valid")
+     * @param Request $req
      */
-    public function validation(Request $request){
-        $biere = $this->createForm(BieresType::class,new Bieres());
-        if ($request->getMethod() == 'POST') {
-            $biere->handleRequest($request);            
-            $em = $this->getDoctrine()->getEntityManager();
-            $em->persist($biere);
+    public function validation(Request $req) {
+        $b = new Bieres();
+        $biere = $this->createForm(BieresType::class,$b );
+        if ($req->getMethod() == 'POST') {
+            $biere->handleRequest($req);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($b);
             $em->flush();
             return $this->redirectToRoute('adminbiere');
         }
         return $this->redirectToRoute('ajouter');
     }
-    
+
     /**
      * @Route("admin/fabrication", name="adminfab")
      * @Template(":admin:fabrication.html.twig")
      */
-    public function fabricationAdmin()
-    {
-     
+    public function fabricationAdmin() {
+        
     }
-    
+
     /**
      * @Route("admin/actualite", name="adminactu")
      * @Template(":admin:actualite.html.twig")
      */
-    public function actualiteAdmin()
-    {
-     
+    public function actualiteAdmin() {
+//        $em = $this->getDoctrine()->getManager();
+//        $rsm = new ResultSetMappingBuilder($em);
+//        $rsm->addRootEntityFromClassMetadata('AppBundle:Actualite', 'actualite');
+//        $query = $em->createNativeQuery("select * from actualite", $rsm);
+//        $actu = $query->getResult();
+//        return array('actu' => $actu);
     }
-    
+
     /**
      * @Route("admin/deconnexion", name="deco")
      * @Template(":site:index.html.twig")
      */
-    public function deconnexion()
-    {
-     
+    public function deconnexion() {
+        
     }
 
 }

@@ -37,7 +37,7 @@ class Bieres
     /**
      * @var string
      *
-     * @ORM\Column(name="composition", type="string", length=255)
+     * @ORM\Column(name="composition", type="text")
      */
     private $composition;
 
@@ -58,12 +58,21 @@ class Bieres
     /**
      * @var bool
      *
-     * @ORM\Column(name="checked", type="boolean")
+     * @ORM\Column(name="ajouter", type="boolean")
      */
-    private $checked;
+    private $ajouter;
+    
+    function getAjouter() {
+        return $this->ajouter;
+    }
 
+    function setAjouter($ajouter) {
+        $this->ajouter = $ajouter;
+    }
 
-    /**
+        
+
+        /**
      * Get id
      *
      * @return int
@@ -168,30 +177,6 @@ class Bieres
     {
         return $this->amertume;
     }
-
-    /**
-     * Set checked
-     *
-     * @param boolean $checked
-     *
-     * @return Bieres
-     */
-    public function setChecked($checked)
-    {
-        $this->checked = $checked;
-
-        return $this;
-    }
-
-    /**
-     * Get checked
-     *
-     * @return bool
-     */
-    public function getChecked()
-    {
-        return $this->checked;
-    }
     
     function getImages() {
         return $this->images;
@@ -200,7 +185,9 @@ class Bieres
     function setImages($images) {
         $this->images = $images;
     }
-
-
+    
+    public function __toString() {
+        return $this->getNomsbieres();
+    }
 }
 
