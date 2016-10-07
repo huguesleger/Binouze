@@ -44,14 +44,14 @@ class Bieres
     /**
      * @var string
      *
-     * @ORM\Column(name="degres", type="decimal", precision=2, scale=2)
+     * @ORM\Column(name="degres", type="decimal", precision=4, scale=2)
      */
     private $degres;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="amertume", type="decimal", precision=2, scale=2)
+     * @ORM\Column(name="amertume", type="decimal", precision=4, scale=2)
      */
     private $amertume;
 

@@ -58,6 +58,14 @@ class ViewController extends Controller {
     public function actualite() {
         
     }
+//    /**
+//     * @Route("/actualite/{id}", name="")
+//     * @Template(":site:actualiteOuvert.html.twig")
+//     */
+//    public function actualiteOuvert($id) {
+//                return array("biereAdmin" => $this->getDoctrine()->getRepository('AppBundle:Bieres')->find($id));
+//
+//    }
 
     /**
      * @Route("/contact", name="contact")

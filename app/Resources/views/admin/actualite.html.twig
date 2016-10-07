@@ -2,7 +2,8 @@
 
 {% block body %}
     <div class="header">
-        {%for actu in actu%}
+        <button><a href="{{path("addActu")}}">Ajouter une actualite</a></button>
+        {%for actu in actus%}
             <div class="container">
                 <div class="row">
                     <div class="actus">
@@ -30,6 +31,7 @@
                         </div>
                     </div>
                 </div>
+                <button><a href="">Editer</a></button>
             </div>
             <div class="separation-actus">
             </div>
