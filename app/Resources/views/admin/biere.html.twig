@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="header">
-        <a href="{{path("ajouter")}}">ajouter</a>
+        <button><a href="{{path("ajouter")}}">Ajouter une biere</a></button>
         {%for biere in biereAdmin%}
             <section class="produits saison1">
                 <div class="present-biere-left">
@@ -24,15 +24,13 @@
                                     <th class="separation-degres">Alcool : {{biere.degres}}%</th>
                                     <th>Amertume IBU : {{biere.amertume}}</th>
                                 </tr>
-                                <tr>
-                                    <th class="separation-degres">Ajouter : <input type="checkbox">{{biere.ajouter}}</th>
-                                </tr>
                             </thead>
                         </table>
                     </div>
                 </div>
-                <a href="{{path("ajouter")}}">editer</a>
-                <a>supprimer</a>
+                <button><a href="{{path("ajouter")}}">Editer</a></button>
+                <button><a href="{{path("ajouter")}}">Ajouter au site</a></button>
+                <button><a>Supprimer au site</a></button>
             </section>
         {%endfor%}
     </div>
