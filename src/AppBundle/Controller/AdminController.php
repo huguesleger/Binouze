@@ -8,7 +8,9 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Actualite;
 use AppBundle\Entity\Bieres;
+use AppBundle\Form\ActualiteType;
 use AppBundle\Form\BieresType;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -56,16 +58,17 @@ class AdminController extends Controller {
      * @Route("admin/ajouter", name="ajouter")
      * @Template(":admin:ajouter.html.twig")
      */
-    public function ajouterAdmin() {
-        $biere = $this->createForm(BieresType::class, new Bieres());
+    public function ajouterBiere() {
+        $biere = $this->createForm(BieresType::class);
         return array("biere" => $biere->createView());
     }
+
 
     /**
      * @Route("/admin/valide",name="valid")
      * @param Request $req
      */
-    public function validation(Request $req) {
+    public function validationBiere(Request $req) {
         $b = new Bieres();
         $biere = $this->createForm(BieresType::class,$b );
         if ($req->getMethod() == 'POST') {
@@ -94,9 +97,35 @@ class AdminController extends Controller {
         $em = $this->getDoctrine()->getManager();
         $rsm = new ResultSetMappingBuilder($em);
         $rsm->addRootEntityFromClassMetadata('AppBundle:Actualite', 'actualite');
-        $query = $em->createNativeQuery("select * from actualite orderby date desc", $rsm);
+        $query = $em->createNativeQuery("select * from actualite ORDER BY date DESC", $rsm);
         $actu = $query->getResult();
-        return array('actu' => $actu);
+        return array('actus' => $actu);
+    }
+    
+    /**
+     * @Route("admin/addActu", name="addActu")
+     * @Template(":admin:ajouterActu.html.twig")
+     */
+    public function ajouterActualite() {
+        $actu = $this->createForm(ActualiteType::class);
+        return array("actu" => $actu->createView());
+    }
+    
+    /**
+     * @Route("/admin/actuValide",name="actuValid")
+     * @param Request $req
+     */
+    public function validationActualite(Request $req) {
+        $b = new Actualite();
+        $biere = $this->createForm(ActualiteType::class,$b );
+        if ($req->getMethod() == 'POST') {
+            $biere->handleRequest($req);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($b);
+            $em->flush();
+            return $this->redirectToRoute('adminactu');
+        }
+        return $this->redirectToRoute('ajouter');
     }
 
     /**

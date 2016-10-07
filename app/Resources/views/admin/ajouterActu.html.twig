@@ -1,0 +1,12 @@
+{%extends ":admin:index.html.twig"%}
+
+{% block body %}
+    <div class="header">
+        {% if id is defined %}
+            {{form_start(actu,{'attr':{'action':path('edit',{'id':id})}})}}
+        {% else%}
+            {{form_start(actu,{'attr':{'action':path('actuValid')}})}}
+        {%endif%}
+        {{form_end(actu)}}
+    </div>
+{% endblock %}
