@@ -91,12 +91,12 @@ class AdminController extends Controller {
      * @Template(":admin:actualite.html.twig")
      */
     public function actualiteAdmin() {
-//        $em = $this->getDoctrine()->getManager();
-//        $rsm = new ResultSetMappingBuilder($em);
-//        $rsm->addRootEntityFromClassMetadata('AppBundle:Actualite', 'actualite');
-//        $query = $em->createNativeQuery("select * from actualite", $rsm);
-//        $actu = $query->getResult();
-//        return array('actu' => $actu);
+        $em = $this->getDoctrine()->getManager();
+        $rsm = new ResultSetMappingBuilder($em);
+        $rsm->addRootEntityFromClassMetadata('AppBundle:Actualite', 'actualite');
+        $query = $em->createNativeQuery("select * from actualite orderby date desc", $rsm);
+        $actu = $query->getResult();
+        return array('actu' => $actu);
     }
 
     /**
