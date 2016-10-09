@@ -6,7 +6,7 @@
         {%for biere in biereAdmin%}
             <section class="produits saison1">
                 <div class="present-biere-left">
-                    <img src="{{asset('./images/') ~ biere.images~('.png')}}" alt="{#{{biere.images.name}}#}">
+                    <img src="{{asset('uploads/img/')~biere.images.images}}" alt="{{biere.images}}">
                 </div>
                 <div class="present-txt-right">
                     <div class="container">

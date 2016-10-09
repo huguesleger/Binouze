@@ -2,6 +2,7 @@
 
 {% block body %}
     <div class="header">
+        {#<img src="{{asset('uploads/img/')~biere.images}}" alt="{{biere.images.noms}}">#}
         {% if id is defined%}
             {{form_start(biere,{'attr':{'action':path('maj',{'id':id})}})}}
         {% else%}

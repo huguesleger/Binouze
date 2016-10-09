@@ -51,8 +51,8 @@ class Actualite
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="fk_images", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Images")
+     * @ORM\JoinColumn(name="fk_images", referencedColumnName="id")
      */
     private $images;
 
@@ -185,6 +185,10 @@ class Actualite
     public function getImages()
     {
         return $this->images;
+    }
+    
+     public function __toString() {
+        return $this->getTitre();
     }
 }
 

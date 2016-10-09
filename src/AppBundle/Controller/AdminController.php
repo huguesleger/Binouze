@@ -10,8 +10,10 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Actualite;
 use AppBundle\Entity\Bieres;
+use AppBundle\Entity\Images;
 use AppBundle\Form\ActualiteType;
 use AppBundle\Form\BieresType;
+use AppBundle\Form\ImagesType;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -187,6 +189,51 @@ class AdminController extends Controller {
         return $this->redirectToRoute("adminbiere");
     }
  
+    
+     /**
+     * @Route ("/admin/val", name="validimages")
+     */
+    public function addImages(Request $request) {
+       $img = new Images();
+        //liaison de l'objet avec le formulaire temporaire
+        //creation du formulaire tampon
+        
+        $f = $this->createForm(ImagesType::class, $img);
+        //on fait quand meme une verif pour s'assurer d'avoir eu un POST comme requete http
+        if ($request->getMethod() == 'POST') {
+            //on lie le formulaire temporaire avec les valeurs de la requete de type post
+            //en gros on se retrouve avec un fork de notre formulaire en local ;) 
+            $f->handleRequest($request);
+           
+            $nomDuFichier = md5(uniqid()).".".$img->getImages()->getClientOriginalExtension();
+            $img->getImages()->move('uploads/img', $nomDuFichier);
+            $img->setImages($nomDuFichier);
+            //Partie persistance des données ou l'on sauvegarde notre news en base de données
+            $em = $this->getDoctrine()->getEntityManager();
+            $em->persist($img);
+            $em->flush();
+            //J'avoue n'avoir implementer aucun test pour m'assurer de la validité des données en database
+            //quoi qu'il en soit après avoir ajouter une news on appele la methode qui va nous afficher la liste des news
+            //Bien entendu j'utilise les alias pour le routage ;) 
+            //faire un redirect vers getNews();
+            return $this->redirectToRoute('img');
+        }
+        //si jamais le post a pas marché je reviens vers l'edition
+        //faire un redirect sur ajout de news
+        return $this->redirectToRoute('img');
+    }
+    
+    
+    /**
+     * @Route("admin/addImg", name="img")
+     * @Template(":admin:ajouterImg.html.twig")
+     */
+    public function ajouterImages() {
+        $img = $this->createForm(ImagesType::class);
+        return array("addImg" => $img->createView());
+    }
+    
+    
     
     /**
      * @Route("admin/deconnexion", name="deco")

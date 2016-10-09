@@ -27,10 +27,11 @@ class Bieres
      * @ORM\Column(name="nomsbieres", type="string", length=255)
      */
     private $nomsbieres;
+    
     /**
      * @var string
-     *
-     * @ORM\Column(name="fk_images", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Images")
+     * @ORM\JoinColumn(name="fk_images", referencedColumnName="id")
      */
     private $images;
 

@@ -1,0 +1,10 @@
+{%extends ":admin:index.html.twig"%}
+
+{% block body %}
+    <div class="header">
+            {{form_start(addImg,{'attr':{'action':path('validimages'),'enctype':'multipart/form-data'}})}}
+            {{form_rest(addImg)}}
+            {{form_end(addImg)}}        
+    </div>
+{% endblock %}
+
