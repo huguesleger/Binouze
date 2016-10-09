@@ -59,11 +59,54 @@ class AdminController extends Controller {
      * @Template(":admin:ajouter.html.twig")
      */
     public function ajouterBiere() {
-        $biere = $this->createForm(BieresType::class);
-        return array("biere" => $biere->createView());
+         $biere = $this->createForm(BieresType::class);
+         return array("biere" => $biere->createView());
     }
 
-
+/**
+ * @Route("admin/modif{id}", name="modif")
+ * @Template(":admin:ajouter.html.twig")
+ */
+    public function modifierBiere($id){
+        $em = $this->getDoctrine()->getEntityManager();
+        $biere = $em->find('AppBundle:Bieres', $id);
+         $f = $this->createForm(BieresType::class, $biere);
+        return array("biere" => $f->createView(), "id"=>$id);
+    }
+    
+    /**
+     * @Route("admin/supp{id}", name="supp")
+     */
+    public function supprimerBiere($id){
+         $em = $this->getDoctrine()->getEntityManager();
+        $u = $em->find('AppBundle:Bieres', $id);
+        $this->createForm(BieresType::class, $u);
+        
+        $u->setAjouter(0);
+        
+       $em->merge($u);
+       $em->flush();
+        
+        return $this->redirectToRoute("adminbiere");
+    }
+    
+    /**
+     * @Route("admin/maj{id}", name="maj")
+     */
+    public function majBiere(Request $req, $id){
+        $em = $this->getDoctrine()->getEntityManager();
+        $b = $em->find('AppBundle:Bieres', $id);
+        $biere = $this->createForm(BieresType::class, $b);
+        if ($req->getMethod() == 'POST') {
+            $biere->handleRequest($req);
+        $em = $this->getDoctrine()->getEntityManager();
+            $em->merge($b);
+            $em->flush();
+            
+            return $this->redirect($this->generateUrl('adminbiere'));
+    }
+    }
+    
     /**
      * @Route("/admin/valide",name="valid")
      * @param Request $req
@@ -128,6 +171,23 @@ class AdminController extends Controller {
         return $this->redirectToRoute('ajouter');
     }
 
+    /**
+     * @Route("admin/publication{id}", name="publi")
+     */
+    function ajouterSite($id){
+        $em = $this->getDoctrine()->getEntityManager();
+        $u = $em->find('AppBundle:Bieres', $id);
+        $this->createForm(BieresType::class, $u);
+        
+        $u->setAjouter(1);
+        
+       $em->merge($u);
+       $em->flush();
+        
+        return $this->redirectToRoute("adminbiere");
+    }
+ 
+    
     /**
      * @Route("admin/deconnexion", name="deco")
      * @Template(":site:index.html.twig")

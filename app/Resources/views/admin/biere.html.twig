@@ -28,9 +28,9 @@
                         </table>
                     </div>
                 </div>
-                <button><a href="">Editer</a></button>
-                <button><a href="">Ajouter au site</a></button>
-                <button><a href="">Supprimer au site</a></button>
+                <button><a href="{{path("modif",{"id":biere.id})}}">Modifier</a></button>
+                <button><a href="{{path("publi",{"id":biere.id})}}">Ajouter au site</a></button>
+                <button><a href="{{path("supp",{"id":biere.id})}}">Supprimer du site</a></button>
             </section>
         {%endfor%}
     </div>
