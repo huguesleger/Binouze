@@ -15,7 +15,7 @@
         {%for biere in biereAdmin%}      
             <section class="{% if loop.index is divisibleby(2) %}produits saison2{% else %}produits saison1{% endif %}">
                 <div class="{% if loop.index is divisibleby(2) %}present-biere-right{% else %}present-biere-left{% endif %}">
-                    <img src="{{asset('./images/') ~ biere.images~('.png')}}" alt="">
+                    <img src="{{asset('uploads/img/')~biere.images.images}}" alt="{{biere.images}}">
                 </div>
                 <div class="present-txt-right">
                     <div class="container">

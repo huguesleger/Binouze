@@ -36,14 +36,6 @@ class AdminController extends Controller {
     }
 
     /**
-     * @Route("admin/brasserie", name="adminbrass")
-     * @Template(":admin:brasserie.html.twig")
-     */
-    public function brasserieAdmin() {
-        
-    }
-
-    /**
      * @Route("admin/biere", name="adminbiere")
      * @Template(":admin:biere.html.twig")
      */
@@ -61,61 +53,61 @@ class AdminController extends Controller {
      * @Template(":admin:ajouter.html.twig")
      */
     public function ajouterBiere() {
-         $biere = $this->createForm(BieresType::class);
-         return array("biere" => $biere->createView());
+        $biere = $this->createForm(BieresType::class);
+        return array("biere" => $biere->createView());
     }
 
-/**
- * @Route("admin/modif{id}", name="modif")
- * @Template(":admin:ajouter.html.twig")
- */
-    public function modifierBiere($id){
+    /**
+     * @Route("admin/modif{id}", name="modif")
+     * @Template(":admin:ajouter.html.twig")
+     */
+    public function modifierBiere($id) {
         $em = $this->getDoctrine()->getEntityManager();
         $biere = $em->find('AppBundle:Bieres', $id);
-         $f = $this->createForm(BieresType::class, $biere);
-        return array("biere" => $f->createView(), "id"=>$id);
+        $f = $this->createForm(BieresType::class, $biere);
+        return array("biere" => $f->createView(), "id" => $id);
     }
-    
+
     /**
      * @Route("admin/supp{id}", name="supp")
      */
-    public function supprimerBiere($id){
-         $em = $this->getDoctrine()->getEntityManager();
+    public function supprimerBiere($id) {
+        $em = $this->getDoctrine()->getEntityManager();
         $u = $em->find('AppBundle:Bieres', $id);
         $this->createForm(BieresType::class, $u);
-        
+
         $u->setAjouter(0);
-        
-       $em->merge($u);
-       $em->flush();
-        
+
+        $em->merge($u);
+        $em->flush();
+
         return $this->redirectToRoute("adminbiere");
     }
-    
+
     /**
      * @Route("admin/maj{id}", name="maj")
      */
-    public function majBiere(Request $req, $id){
+    public function majBiere(Request $req, $id) {
         $em = $this->getDoctrine()->getEntityManager();
         $b = $em->find('AppBundle:Bieres', $id);
         $biere = $this->createForm(BieresType::class, $b);
         if ($req->getMethod() == 'POST') {
             $biere->handleRequest($req);
-        $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getEntityManager();
             $em->merge($b);
             $em->flush();
-            
+
             return $this->redirect($this->generateUrl('adminbiere'));
+        }
     }
-    }
-    
+
     /**
      * @Route("/admin/valide",name="valid")
      * @param Request $req
      */
     public function validationBiere(Request $req) {
         $b = new Bieres();
-        $biere = $this->createForm(BieresType::class,$b );
+        $biere = $this->createForm(BieresType::class, $b);
         if ($req->getMethod() == 'POST') {
             $biere->handleRequest($req);
             $em = $this->getDoctrine()->getManager();
@@ -146,7 +138,7 @@ class AdminController extends Controller {
         $actu = $query->getResult();
         return array('actus' => $actu);
     }
-    
+
     /**
      * @Route("admin/addActu", name="addActu")
      * @Template(":admin:ajouterActu.html.twig")
@@ -155,14 +147,14 @@ class AdminController extends Controller {
         $actu = $this->createForm(ActualiteType::class);
         return array("actu" => $actu->createView());
     }
-    
+
     /**
      * @Route("/admin/actuValide",name="actuValid")
      * @param Request $req
      */
     public function validationActualite(Request $req) {
         $b = new Actualite();
-        $biere = $this->createForm(ActualiteType::class,$b );
+        $biere = $this->createForm(ActualiteType::class, $b);
         if ($req->getMethod() == 'POST') {
             $biere->handleRequest($req);
             $em = $this->getDoctrine()->getManager();
@@ -176,36 +168,35 @@ class AdminController extends Controller {
     /**
      * @Route("admin/publication{id}", name="publi")
      */
-    function ajouterSite($id){
+    function ajouterSite($id) {
         $em = $this->getDoctrine()->getEntityManager();
         $u = $em->find('AppBundle:Bieres', $id);
         $this->createForm(BieresType::class, $u);
-        
+
         $u->setAjouter(1);
-        
-       $em->merge($u);
-       $em->flush();
-        
+
+        $em->merge($u);
+        $em->flush();
+
         return $this->redirectToRoute("adminbiere");
     }
- 
-    
-     /**
+
+    /**
      * @Route ("/admin/val", name="validimages")
      */
     public function addImages(Request $request) {
-       $img = new Images();
+        $img = new Images();
         //liaison de l'objet avec le formulaire temporaire
         //creation du formulaire tampon
-        
+
         $f = $this->createForm(ImagesType::class, $img);
         //on fait quand meme une verif pour s'assurer d'avoir eu un POST comme requete http
         if ($request->getMethod() == 'POST') {
             //on lie le formulaire temporaire avec les valeurs de la requete de type post
             //en gros on se retrouve avec un fork de notre formulaire en local ;) 
             $f->handleRequest($request);
-           
-            $nomDuFichier = md5(uniqid()).".".$img->getImages()->getClientOriginalExtension();
+
+            $nomDuFichier = md5(uniqid()) . "." . $img->getImages()->getClientOriginalExtension();
             $img->getImages()->move('uploads/img', $nomDuFichier);
             $img->setImages($nomDuFichier);
             //Partie persistance des données ou l'on sauvegarde notre news en base de données
@@ -222,8 +213,7 @@ class AdminController extends Controller {
         //faire un redirect sur ajout de news
         return $this->redirectToRoute('img');
     }
-    
-    
+
     /**
      * @Route("admin/addImg", name="img")
      * @Template(":admin:ajouterImg.html.twig")
@@ -232,9 +222,7 @@ class AdminController extends Controller {
         $img = $this->createForm(ImagesType::class);
         return array("addImg" => $img->createView());
     }
-    
-    
-    
+
     /**
      * @Route("admin/deconnexion", name="deco")
      * @Template(":site:index.html.twig")

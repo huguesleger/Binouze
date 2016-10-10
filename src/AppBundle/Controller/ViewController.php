@@ -56,8 +56,15 @@ class ViewController extends Controller {
      * @Template(":site:actualite.html.twig")
      */
     public function actualite() {
-        
+//        $comment= $this->getDoctrine()->getRepository('AppBundle:Actualite')->getNews();
+//        if (strlen($comment) > 255) {
+//            $comment = substr($comment, 0, 255);
+//            $dernier_mot = strrpos($comment, " ");
+//            $comment = substr($comment, 0, $dernier_mot);
+//        }
+        return array("actus" => $this->getDoctrine()->getRepository('AppBundle:Actualite')->findAll());
     }
+
 //    /**
 //     * @Route("/actualite/{id}", name="")
 //     * @Template(":site:actualiteOuvert.html.twig")
