@@ -1,9 +1,8 @@
-{% extends ":admin:index.html.twig" %}
+{% extends ":site:index.html.twig" %}
 
-{% block body %}
+{% block section %}
     <div class="header">
-        <button><a href="{{path("addActu")}}">Ajouter une actualite</a></button>
-        {%for actu in actus%}
+        {%for actu in detail%}
             <div class="container">
                 <div class="row">
                     <div class="actus">
@@ -16,8 +15,9 @@
                             </div>
 
                             <div class="txt-actu">
-                                <p>{{actu.news}}
-                                    <br> <a href="#"><span class="suite">lire la suite</span></a>
+                                <p>
+                                    {{actu.news}}
+                                    <br><a href="{{path("actu")}}"><span class="suite">Retour</span></a>
                                 </p>
                             </div>
                             <table class="infos table">
@@ -31,9 +31,6 @@
                         </div>
                     </div>
                 </div>
-                <button><a href="{{path("actumodif",{"id":actu.id})}}">Modifier</a></button>
-            </div>
-            <div class="separation-actus">
             </div>
         {% endfor %}
     </div>

@@ -75,9 +75,7 @@ class AdminController extends Controller {
         $em = $this->getDoctrine()->getEntityManager();
         $u = $em->find('AppBundle:Bieres', $id);
         $this->createForm(BieresType::class, $u);
-
         $u->setAjouter(0);
-
         $em->merge($u);
         $em->flush();
 
@@ -146,6 +144,33 @@ class AdminController extends Controller {
     public function ajouterActualite() {
         $actu = $this->createForm(ActualiteType::class);
         return array("actu" => $actu->createView());
+    }
+
+    /**
+     * @Route("admin/actumodif{id}", name="actumodif")
+     * @Template(":admin:ajouterActu.html.twig")
+     */
+    public function modifierActu($id) {
+        $em = $this->getDoctrine()->getEntityManager();
+        $biere = $em->find('AppBundle:Actualite', $id);
+        $f = $this->createForm(ActualiteType::class, $biere);
+        return array("actu" => $f->createView(), "id" => $id);
+    }
+
+    /**
+     * @Route("admin/actuMaj{id}", name="actumaj")
+     */
+    public function majActu(Request $req, $id) {
+        $em = $this->getDoctrine()->getEntityManager();
+        $b = $em->find('AppBundle:Actualite', $id);
+        $biere = $this->createForm(ActualiteType::class, $b);
+        if ($req->getMethod() == 'POST') {
+            $biere->handleRequest($req);
+            $em = $this->getDoctrine()->getEntityManager();
+            $em->merge($b);
+            $em->flush();
+            return $this->redirect($this->generateUrl('adminactu'));
+        }
     }
 
     /**

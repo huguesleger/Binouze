@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="actus">
                         <div class="col-sm-6 col-md-3 col-md-offset-2">
-                            <img src="{{asset('uploads/img/')~actu.images.images}}" alt="{{actu.images}}">
+                            <img class="img-responsive" src="{{asset('uploads/img/')~actu.images.images}}" alt="{{actu.images}}">
                         </div>
                         <div class="col-sm-6 col-md-4">
                             <div class="title-actu">
@@ -16,14 +16,14 @@
 
                             <div class="txt-actu">
                                 <p>
-                                    {{actu.news| truncate(255, true, ' ...')}}
-                                    <br><a href="#"><span class="suite">lire la suite</span></a>
+                                    {{actu.news| truncate(450, true, ' ...')}}
+                                    <br><a href="{{path("detail",{"id":actu.id})}}"><span class="suite">lire la suite</span></a>
                                 </p>
                             </div>
                             <table class="infos table">
                                 <thead>
                                     <tr>
-                                        <th class="separation-auteur"> Publié le {{actu.date}}</th>
+                                        <th class="separation-auteur"> Publié le {{actu.date|date("d/m/Y")}}</th>
                                         <th> Par {{actu.auteur}}</th>
                                     </tr>
                                 </thead>

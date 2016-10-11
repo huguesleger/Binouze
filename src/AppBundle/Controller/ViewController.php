@@ -56,23 +56,16 @@ class ViewController extends Controller {
      * @Template(":site:actualite.html.twig")
      */
     public function actualite() {
-//        $comment= $this->getDoctrine()->getRepository('AppBundle:Actualite')->getNews();
-//        if (strlen($comment) > 255) {
-//            $comment = substr($comment, 0, 255);
-//            $dernier_mot = strrpos($comment, " ");
-//            $comment = substr($comment, 0, $dernier_mot);
-//        }
         return array("actus" => $this->getDoctrine()->getRepository('AppBundle:Actualite')->findAll());
     }
 
-//    /**
-//     * @Route("/actualite/{id}", name="")
-//     * @Template(":site:actualiteOuvert.html.twig")
-//     */
-//    public function actualiteOuvert($id) {
-//                return array("biereAdmin" => $this->getDoctrine()->getRepository('AppBundle:Bieres')->find($id));
-//
-//    }
+    /**
+     * @Route("/actualite/{id}", name="detail")
+     * @Template(":site:actualiteDetail.html.twig")
+     */
+    public function actualiteDetail($id) {
+        return array("detail" => $this->getDoctrine()->getRepository('AppBundle:Actualite')->findById($id));
+    }
 
     /**
      * @Route("/contact", name="contact")

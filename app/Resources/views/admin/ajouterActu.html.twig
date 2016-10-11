@@ -3,7 +3,7 @@
 {% block body %}
     <div class="header">
         {% if id is defined %}
-            {{form_start(actu,{'attr':{'action':path('edit',{'id':id})}})}}
+            {{form_start(actu,{'attr':{'action':path('actumaj',{'id':id})}})}}
         {% else%}
             {{form_start(actu,{'attr':{'action':path('actuValid')}})}}
         {%endif%}

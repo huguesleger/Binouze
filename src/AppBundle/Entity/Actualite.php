@@ -36,9 +36,9 @@ class Actualite
     private $news;
 
     /**
-     * @var string
+     * @var DateTime
      *
-     * @ORM\Column(name="date", type="string", length=255)
+     * @ORM\Column(name="date", type="date")
      */
     private $date;
 
