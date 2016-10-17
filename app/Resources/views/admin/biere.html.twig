@@ -29,8 +29,11 @@
                     </div>
                 </div>
                 <button><a href="{{path("modif",{"id":biere.id})}}">Modifier</a></button>
+                {% if biere.ajouter == 0 %}
                 <button><a href="{{path("publi",{"id":biere.id})}}">Ajouter au site</a></button>
-                <button><a href="{{path("supp",{"id":biere.id})}}">Supprimer du site</a></button>
+                {% else %}
+                    <button><a href="{{path("supp",{"id":biere.id})}}">Supprimer du site</a></button>
+                    {% endif %}
             </section>
         {%endfor%}
     </div>
