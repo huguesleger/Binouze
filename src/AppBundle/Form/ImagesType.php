@@ -19,7 +19,7 @@ class ImagesType extends AbstractType
         $builder
             ->add('noms')
             ->add('images', FileType::class, array('data_class' => null))
-            ->add('submit', SubmitType::class)
+            ->add('ajouter', SubmitType::class)
         ;
     }
     

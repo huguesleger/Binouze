@@ -1,9 +1,15 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
-
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
+        gestionUser:
+            entity:
+                class: AppBundle:User
+                property: nom
+        
         in_memory:
             memory: ~
 
@@ -14,9 +20,36 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            pattern : ^/
+            anonymous: true
+            provider: gestionUser
+            form_login:
+                check_path: loginCheck
+                login_path: admin
+            logout:
+                path: loginOut
+                target: /
+               
+        administration:
+            pattern: ^/admin
+            anonymous: false
+            provider: gestionUser
+            form_login:
+                check_path: loginCheck
+                login_path: admin
+            logout:
+                path: loginOut
+                target: /
+    encoders:
+#        Symfony\Component\Security\Core\User\User: plaintext
+        AppBundle\Entity\User:
+            algorithm: plaintext
+            ignore_case: false
+            
             # activate different ways to authenticate
-
+    access_control:   
+        # Un admin ou un user classique peut ajouter une annonce ... quelque chose d'étrange est ici ....
+        - { path: ^/admin , roles: ROLE_ADMIN }  
             # http_basic: ~
             # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
 
